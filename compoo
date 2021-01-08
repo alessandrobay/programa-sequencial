@@ -1,0 +1,66 @@
+package aplicacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entidade.Geometria;
+
+public class Programa {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		Geometria geometria = new Geometria();
+		
+	    System.out.println("digite os números necessários.");
+		geometria.base1 = sc.nextDouble();
+		geometria.base2 = sc.nextDouble();
+		geometria.altura = sc.nextDouble();
+
+		geometria.triangulo();
+	    geometria.circulo();
+	    geometria.trapezio();
+	    geometria.quadrado();
+	    geometria.retangulo();
+	    
+	    System.out.printf(" o triangulo; %.3f%n", geometria.triangulo());
+		System.out.printf(" o circulo; %.3f%n", geometria.circulo());
+		System.out.printf(" o trapézio; %.3f%n",  geometria.trapezio());
+		System.out.printf(" o quadrado; %.3f%n", geometria.quadrado());
+		System.out.printf(" o retângulo; %.3f%n", geometria.retangulo());
+	}
+
+}
+
+----------------------------------------------------------------------------
+
+package entidade;
+
+public class Geometria {
+
+	public double base1;
+	public double base2;
+	public double altura;
+
+	public double triangulo() {
+		return base1 * altura;
+	}
+
+	public double circulo() {
+		return 3.14 * Math.pow(altura, 2);
+	}
+
+	public double trapezio() {
+		return (base1 + base2) / 2.0 * altura;
+	}
+
+	public double quadrado() {
+		return Math.pow(base2, 2);
+	}
+
+	public double retangulo() {
+		return base1 * base2;
+	}
+}
