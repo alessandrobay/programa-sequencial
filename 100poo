@@ -1,0 +1,33 @@
+package aplicacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Programa {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		double base1, base2, altura;
+
+		System.out.println("digite os números necessários.");
+		base1 = sc.nextDouble();
+		base2 = sc.nextDouble();
+		altura = sc.nextDouble();
+
+		double triangulo = base1 * altura;
+		double circulo = 3.14 * Math.pow(altura, 2);
+		double trapezio = (base1 + base2) / 2.0 * altura;
+		double quadrado = Math.pow(base2, 2);
+		double retangulo = base1 * base2;
+
+		System.out.printf(" o triangulo; %.3f%n", triangulo);
+		System.out.printf(" o circulo; %.3f%n", circulo);
+		System.out.printf(" o ttapézio; %.3f%n", trapezio);
+		System.out.printf(" o quadrado; %.3f%n", quadrado);
+		System.out.printf(" o retângulo; %.3f%n", retangulo);
+	}
+
+}
