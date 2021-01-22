@@ -1,0 +1,28 @@
+package aplicacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Programa {
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		int a, b;
+
+		System.out.println("digite dois números e diga qual o maior");
+
+		a = sc.nextInt();
+		b = sc.nextInt();
+
+		if (a > b) {
+			System.out.println(a + " é o maior deles.");
+		} else {
+			System.out.println(b + " é o maior deles.");
+		}
+
+		sc.close();
+	}
+
+}
