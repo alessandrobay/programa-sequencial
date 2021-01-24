@@ -1,0 +1,46 @@
+package entidade;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Classe {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		double ax, bx, cx, ay, by, cy;
+
+		System.out.println(" digite os lados do triângulo A:");
+
+		ax = sc.nextDouble();
+		bx = sc.nextDouble();
+		cx = sc.nextDouble();
+
+		System.out.println(" digite os lados do triângulo Y:");
+
+		ay = sc.nextDouble();
+		by = sc.nextDouble();
+		cy = sc.nextDouble();
+
+		double p = (ax + bx + cx) / 2;
+		double areax = Math.sqrt(p * (p - ax) * (p - bx) * (p - cx));
+
+		p = (ay + by + cy) / 2;
+		double areay = Math.sqrt(p * (p - ay) * (p - by) * (p - cy));
+
+		System.out.printf("a área de x é: %.2f%n", areax);
+		System.out.printf("a área de Y é:%.2f%n ", areay);
+
+		if (areax > areay) {
+			System.out.println("o triâgulo X é maior");
+		} 
+		else {
+			System.out.println("o triângulo Y é maior");
+		}
+
+		sc.close();
+
+	}
+}
